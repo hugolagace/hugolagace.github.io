@@ -1,29 +1,40 @@
+
+<!--
+  Project by Zua 
+  https://github.com/thatziv/webhook
+-->
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord Webhook Tutorial</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title></title>
+  <meta name="author" content="Zua">
+  <meta name="description" content="Simple Discord Webhook Sender">
+  <meta name="keywords" content="discord,zua,webhook">
+  <meta name="title" content="Discord Webhook Sender">
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
   </head>
   <body>
-    <input type="text" id="Game" name="Game" value=""><br><br>
-	  <button onclick="sendMessage()">Send</button>
+
+    <div id="header">
+    </div>
+    <div id="container">
+      <div class="center-align">
+        <input type='text' id="link" placeholder="">
+        <p>Ton nom et classe.</p><input type="text" id="username" placeholder="" value="">
+        <p>Le jeux.</p><input type="text" id="content" placeholder="">
+        <br>
+        <button id="btn">Send</button>
+        <center>
+       <!--JS log in the works atm-->
+        <p id='log'></p>
+      </center>
+    </div>
+  </div> 
+ </div> 
+ <script src="jquery.js"></script>
+  <script src="main.js"></script>
   </body>
-
-  <script>
-    function sendMessage() {
-      const request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/888458526933012481/q_f8_uvTnqEDUu705aM4NjFjCPuMJM04KUZod58gkYQcvPypr6dfvBwEtBoczMyBcwcI");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      const params = {
-        username: "document.querySelector("Game").value",
-        avatar_url: "",
-        content: "document.querySelector("Game").value"
-      }
-
-      request.send(JSON.stringify(params));
-    }
-  </script>
 </html>
